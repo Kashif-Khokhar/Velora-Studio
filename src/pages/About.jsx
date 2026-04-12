@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Rocket, Heart, Code } from 'lucide-react';
+import { Github, Linkedin, Twitter, Rocket, Heart, Code, Mail } from 'lucide-react';
 
 export default function About() {
   return (
@@ -91,6 +91,7 @@ export default function About() {
                         <SocialButton href="https://github.com/Kashif-Khokhar" icon={<Github className="w-5 h-5" />} label="GitHub" />
                         <SocialButton href="https://www.linkedin.com/in/kashif-ali-khokhar/" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
                         <SocialButton href="https://x.com/Kashif_Khokhar1" icon={<Twitter className="w-5 h-5" />} label="Twitter" />
+                        <SocialButton href="mailto:kashifalikhokharofficial@gmail.com" icon={<Mail className="w-5 h-5" />} label="Email" />
                     </div>
                 </div>
             </div>
