@@ -832,7 +832,7 @@ export default function Editor() {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="w-full lg:w-80 bg-white/60 backdrop-blur-xl p-6 rounded-2xl border border-white/50 shadow-lg flex flex-col gap-5"
+          className="w-full lg:w-80 bg-white/70 backdrop-blur-xl p-5 md:p-6 rounded-3xl border border-white/50 shadow-xl flex flex-col gap-5"
           style={{ height: 'auto', minHeight: '500px' }}
         >
           <h2 className="text-lg font-black flex items-center gap-2 text-slate-800">
@@ -1014,9 +1014,9 @@ export default function Editor() {
         </motion.div>
 
         {/* ── Live Preview ── */}
-        <div className="flex-1 flex items-center justify-center rounded-2xl overflow-hidden relative p-4 md:p-8">
+        <div className="flex-1 flex items-center justify-center rounded-3xl overflow-hidden relative p-2 md:p-8 bg-slate-50/50">
           {/* Background pattern behind the card */}
-          <div className="absolute inset-0 opacity-30 pointer-events-none"
+          <div className="absolute inset-0 opacity-20 pointer-events-none"
             style={{ backgroundImage: 'radial-gradient(circle, #e2e8f0 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
           <motion.div
@@ -1024,13 +1024,13 @@ export default function Editor() {
             initial={{ opacity: 0, scale: 0.95, y: 10 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.35 }}
-            className="w-full relative z-10"
+            className="w-full relative z-10 flex flex-col items-center"
             style={{ maxWidth: '420px' }}
           >
-            <div className="w-full rounded-3xl shadow-2xl relative overflow-hidden flex flex-col items-center justify-center text-center p-8 border border-slate-100 bg-white">
+            <div className="w-full rounded-[2rem] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center text-center p-4 md:p-8 border border-white bg-white/80 backdrop-blur-sm">
               <div
                 ref={previewRef}
-                className="w-full relative flex flex-col items-center justify-center text-center capture-reset"
+                className="relative flex flex-col items-center justify-center text-center capture-reset origin-top sm:origin-center scale-[0.8] xs:scale-[0.85] sm:scale-100"
                 style={{
                   width: '350px',
                   minHeight: '500px',

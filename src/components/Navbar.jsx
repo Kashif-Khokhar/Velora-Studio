@@ -67,20 +67,29 @@ export default function Navbar() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
-                className="md:hidden border-t border-orange-100 bg-white/95 backdrop-blur-xl overflow-hidden"
+                className="md:hidden border-t border-orange-100 bg-white/98 backdrop-blur-2xl overflow-hidden shadow-2xl"
             >
-                <div className="container mx-auto px-6 py-8 flex flex-col gap-6 font-medium text-lg text-slate-600 text-center">
-                    <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-colors">Home</Link>
-                    <Link to="/templates" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-colors">Templates</Link>
-                    <Link to="/calendar" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-colors">Live Calendar</Link>
-                    <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-colors">About</Link>
+                <div className="container mx-auto px-6 py-10 flex flex-col gap-6 font-bold text-xl text-slate-700 text-center">
+                    {['Home', 'Templates', 'Live Calendar', 'About'].map((item) => (
+                         <Link 
+                            key={item}
+                            to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`} 
+                            onClick={() => setIsOpen(false)} 
+                            className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95"
+                         >
+                            {item}
+                         </Link>
+                    ))}
                     
-                    <div className="pt-4 border-t border-slate-100">
+                    <div className="pt-6 border-t border-slate-100">
                          <Link to="/editor" onClick={() => setIsOpen(false)}>
-                            <button className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-orange-600 to-rose-600 text-white px-6 py-3 rounded-full font-bold shadow-md">
-                                <PlusCircle className="w-5 h-5" />
+                            <motion.button 
+                                whileTap={{ scale: 0.95 }}
+                                className="w-full flex justify-center items-center gap-2 bg-gradient-to-r from-orange-600 to-rose-600 text-white px-6 py-4 rounded-2xl font-black shadow-xl shadow-orange-500/20"
+                            >
+                                <PlusCircle className="w-6 h-6" />
                                 Create Invite
-                            </button>
+                            </motion.button>
                         </Link>
                     </div>
                 </div>

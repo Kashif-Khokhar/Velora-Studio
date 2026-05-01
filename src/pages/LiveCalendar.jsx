@@ -77,10 +77,10 @@ export default function LiveCalendar() {
                         <Clock className="w-4 h-4 text-orange-600" />
                         <span className="text-sm font-bold text-slate-800 tracking-wide uppercase">Local Time</span>
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-black text-slate-900 tracking-tighter mb-2 tabular-nums">
+                    <h1 className="text-5xl sm:text-7xl md:text-8xl font-black text-slate-900 tracking-tighter mb-2 tabular-nums">
                         {currentDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                     </h1>
-                    <p className="text-2xl font-light text-slate-600">
+                    <p className="text-xl sm:text-2xl font-light text-slate-600">
                         {currentDate.toLocaleDateString([], { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}
                     </p>
                 </div>
@@ -90,15 +90,15 @@ export default function LiveCalendar() {
                     <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                         <Sparkles className="w-4 h-4 text-orange-500" /> Time Travel
                     </h3>
-                    <form onSubmit={handleSearch} className="flex gap-2">
+                    <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-2">
                         <input 
                             type="text" 
                             placeholder="Jump to date (e.g., 2028)" 
                             value={searchInput}
                             onChange={(e) => setSearchInput(e.target.value)}
-                            className="flex-1 bg-white/60 border border-slate-200 rounded-xl p-3 text-slate-800 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-medium"
+                            className="flex-1 bg-white/60 border border-slate-200 rounded-xl p-3 text-slate-800 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all font-medium text-sm"
                         />
-                        <button type="submit" className="bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md">
+                        <button type="submit" className="bg-orange-600 hover:bg-orange-700 text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md text-sm sm:text-base">
                             Go
                         </button>
                     </form>
@@ -111,15 +111,15 @@ export default function LiveCalendar() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.1 }}
-                className="w-full lg:max-w-2xl bg-white/60 backdrop-blur-2xl rounded-[2.5rem] p-8 md:p-10 border border-white/60 shadow-2xl shadow-orange-900/10"
+                className="w-full lg:max-w-2xl bg-white/60 backdrop-blur-2xl rounded-[2rem] sm:rounded-[2.5rem] p-4 sm:p-8 md:p-10 border border-white/60 shadow-2xl shadow-orange-900/10"
             >
                 {/* Calendar Header */}
-                <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
-                    <h2 className="text-3xl font-bold text-slate-900 flex items-center gap-3">
+                <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-10 gap-4">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
                         <div className="p-2 bg-orange-100 rounded-lg">
-                            <CalendarIcon className="w-6 h-6 text-orange-600" />
+                            <CalendarIcon className="w-5 h-5 sm:w-6 h-6 text-orange-600" />
                         </div>
-                        {monthNames[viewDate.getMonth()]} <span className="text-slate-400">{viewDate.getFullYear()}</span>
+                        {monthNames[viewDate.getMonth()]} <span className="text-slate-400 font-medium">{viewDate.getFullYear()}</span>
                     </h2>
                     <div className="flex bg-white/50 rounded-full p-1 border border-white/40 shadow-sm">
                         <NavButton onClick={() => changeYear(-1)} icon={<ChevronsLeft className="w-5 h-5" />} />

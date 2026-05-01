@@ -26,8 +26,8 @@ export default function Home() {
                 <span className="text-sm font-medium text-slate-800">The Future of Event Invitations</span>
             </motion.div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 drop-shadow-sm">
-              Invitations that <br/> 
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 text-slate-900 drop-shadow-sm leading-[1.1]">
+              Invitations that <br className="hidden sm:block" /> 
               <span className="bg-gradient-to-r from-orange-600 to-rose-500 bg-clip-text text-transparent">Radiate Warmth.</span>
             </h1>
             
@@ -70,7 +70,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
             <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Why Choose Velora?</h2>
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 border-t border-white/20">
+      <section className="py-16 md:py-24 border-t border-white/20">
         <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900">How It Works</h2>
             
@@ -162,7 +162,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-24">
+      <section className="py-16 md:py-24">
          <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center text-slate-900">Loved by Hosts</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -189,7 +189,7 @@ export default function Home() {
       </section>
 
       {/* CTR Section */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-20 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-slate-900/90 backdrop-blur-xl"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-orange-900/40 to-rose-900/40 pointer-events-none"></div>
         
