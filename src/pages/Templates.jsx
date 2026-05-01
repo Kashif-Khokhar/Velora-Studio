@@ -188,7 +188,7 @@ export default function Templates() {
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className={`
-                px-5 py-2.5 rounded-full font-bold text-sm transition-all flex items-center gap-2
+                px-3 py-2 sm:px-5 sm:py-2.5 rounded-full font-bold text-[13px] sm:text-sm transition-all flex items-center gap-2
                 ${activeCategory === cat 
                   ? 'bg-gradient-to-r from-orange-600 to-rose-600 text-white shadow-lg shadow-orange-500/25' 
                   : 'bg-white text-slate-600 hover:bg-orange-50 hover:text-orange-700 shadow-sm border border-slate-100'
@@ -227,7 +227,7 @@ export default function Templates() {
                 className={template.isFeatured ? 'md:col-span-2 xl:col-span-2' : ''}
               >
                 <Link to={`/editor?theme=${template.theme}&title=${encodeURIComponent(template.defaultTitle)}`} className="block group">
-                  <div className={`relative bg-slate-900 rounded-3xl overflow-hidden group-hover:-translate-y-2 transition-all duration-400 ${template.isFeatured ? 'aspect-video md:aspect-[16/9]' : 'aspect-[3/4]'}`}
+                  <div className={`relative bg-slate-900 rounded-3xl overflow-hidden group-hover:-translate-y-2 transition-all duration-400 ${template.isFeatured ? 'aspect-[4/3] sm:aspect-[16/9]' : 'aspect-[3/4]'}`}
                     style={template.isFeatured ? { boxShadow: '0 0 0 2px #f97316, 0 25px 50px rgba(249,115,22,0.3)' } : { boxShadow: '0 10px 30px rgba(0,0,0,0.15)' }}>
                     
                     {/* Background Image */}
@@ -247,7 +247,7 @@ export default function Templates() {
                     )}
                     
                     {/* Top Badges */}
-                    <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-20">
+                    <div className="absolute top-3 sm:top-4 left-3 sm:left-4 right-3 sm:right-4 flex justify-between items-start z-20">
                       <div className="flex items-center gap-2">
                         {/* Icon Badge */}
                         <div className="w-10 h-10 bg-white/15 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/25 shadow-lg">
@@ -282,8 +282,8 @@ export default function Templates() {
                     </div>
 
                     {/* Bottom Info */}
-                    <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                      <h3 className={`font-black text-white mb-1 leading-tight ${template.isFeatured ? 'text-2xl sm:text-3xl' : 'text-lg sm:text-xl'}`}>
+                    <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-5 z-20">
+                      <h3 className={`font-black text-white mb-1 leading-tight ${template.isFeatured ? 'text-xl sm:text-3xl' : 'text-lg sm:text-xl'}`}>
                         {template.title}
                       </h3>
                       {template.isFeatured && template.description && (
