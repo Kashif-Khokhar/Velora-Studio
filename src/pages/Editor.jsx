@@ -1030,7 +1030,7 @@ export default function Editor() {
             <div className="w-full rounded-[2rem] shadow-2xl relative overflow-hidden flex flex-col items-center justify-center text-center p-4 md:p-8 border border-white bg-white/80 backdrop-blur-sm">
               <div
                 ref={previewRef}
-                className="relative flex flex-col items-center justify-center text-center capture-reset origin-top sm:origin-center scale-[0.8] xs:scale-[0.85] sm:scale-100"
+                className="relative flex flex-col items-center justify-center text-center capture-reset origin-top sm:origin-center scale-[0.8] sm:scale-100"
                 style={{
                   width: '350px',
                   minHeight: '500px',

@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar as CalendarIcon, Clock, ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, Sparkles } from 'lucide-react';
 
+function NavButton({ onClick, icon }) {
+    return (
+        <button 
+            onClick={onClick} 
+            className="p-3 hover:bg-white rounded-full transition-all text-slate-500 hover:text-orange-600 hover:shadow-sm"
+        >
+            {icon}
+        </button>
+    )
+}
+
 export default function LiveCalendar() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [viewDate, setViewDate] = useState(new Date());
@@ -116,10 +127,13 @@ export default function LiveCalendar() {
                 {/* Calendar Header */}
                 <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-10 gap-4">
                     <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 flex items-center gap-3">
-                        <div className="p-2 bg-orange-100 rounded-lg">
-                            <CalendarIcon className="w-5 h-5 sm:w-6 h-6 text-orange-600" />
+                        <div className="p-2 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <CalendarIcon size={24} className="text-orange-600" />
                         </div>
-                        {monthNames[viewDate.getMonth()]} <span className="text-slate-400 font-medium">{viewDate.getFullYear()}</span>
+                        <div className="flex items-baseline gap-2">
+                            <span>{monthNames[viewDate.getMonth()]}</span>
+                            <span className="text-slate-400 font-medium">{viewDate.getFullYear()}</span>
+                        </div>
                     </h2>
                     <div className="flex bg-white/50 rounded-full p-1 border border-white/40 shadow-sm">
                         <NavButton onClick={() => changeYear(-1)} icon={<ChevronsLeft className="w-5 h-5" />} />
@@ -172,13 +186,4 @@ export default function LiveCalendar() {
   );
 }
 
-function NavButton({ onClick, icon }) {
-    return (
-        <button 
-            onClick={onClick} 
-            className="p-3 hover:bg-white rounded-full transition-all text-slate-500 hover:text-orange-600 hover:shadow-sm"
-        >
-            {icon}
-        </button>
-    )
-}
+

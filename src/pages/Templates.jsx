@@ -166,7 +166,7 @@ export default function Templates() {
             <span className="text-sm font-bold text-orange-700">{templates.length} Premium Templates</span>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-black mb-5 text-slate-900 tracking-tight leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-5 text-slate-900 tracking-tight leading-[1.1]">
             Find Your{' '}
             <span className="bg-gradient-to-r from-orange-600 to-rose-600 bg-clip-text text-transparent">
               Perfect Design.
@@ -227,7 +227,7 @@ export default function Templates() {
                 className={template.isFeatured ? 'md:col-span-2 xl:col-span-2' : ''}
               >
                 <Link to={`/editor?theme=${template.theme}&title=${encodeURIComponent(template.defaultTitle)}`} className="block group">
-                  <div className={`relative bg-slate-900 rounded-2xl overflow-hidden group-hover:-translate-y-2 transition-all duration-400 ${template.isFeatured ? 'aspect-[16/9]' : 'aspect-[3/4]'}`}
+                  <div className={`relative bg-slate-900 rounded-3xl overflow-hidden group-hover:-translate-y-2 transition-all duration-400 ${template.isFeatured ? 'aspect-video md:aspect-[16/9]' : 'aspect-[3/4]'}`}
                     style={template.isFeatured ? { boxShadow: '0 0 0 2px #f97316, 0 25px 50px rgba(249,115,22,0.3)' } : { boxShadow: '0 10px 30px rgba(0,0,0,0.15)' }}>
                     
                     {/* Background Image */}
@@ -248,10 +248,15 @@ export default function Templates() {
                     
                     {/* Top Badges */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-20">
-                      {/* Icon Badge */}
-                      <div className="w-10 h-10 bg-white/15 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/25"
-                        style={{ boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
-                        {template.icon}
+                      <div className="flex items-center gap-2">
+                        {/* Icon Badge */}
+                        <div className="w-10 h-10 bg-white/15 backdrop-blur-md rounded-xl flex items-center justify-center border border-white/25 shadow-lg">
+                          {template.icon}
+                        </div>
+                        {/* Category Tag */}
+                        <span className="px-3 py-1 bg-black/20 backdrop-blur-md rounded-full text-[10px] font-black tracking-widest uppercase text-white/90 border border-white/10">
+                          {template.category}
+                        </span>
                       </div>
                       {/* Featured / NEW badge */}
                       {template.isFeatured ? (
@@ -278,14 +283,11 @@ export default function Templates() {
 
                     {/* Bottom Info */}
                     <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                      <span className="inline-block px-2.5 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-black tracking-widest uppercase text-white/90 mb-2.5 border border-white/15">
-                        {template.category}
-                      </span>
-                      <h3 className={`font-black text-white mb-1 leading-tight ${template.isFeatured ? 'text-3xl' : 'text-xl'}`}>
+                      <h3 className={`font-black text-white mb-1 leading-tight ${template.isFeatured ? 'text-2xl sm:text-3xl' : 'text-lg sm:text-xl'}`}>
                         {template.title}
                       </h3>
                       {template.isFeatured && template.description && (
-                        <p className="text-white/70 text-sm font-medium mb-2 max-w-md">{template.description}</p>
+                        <p className="text-white/70 text-xs sm:text-sm font-medium mb-2 max-w-md line-clamp-2 sm:line-clamp-none">{template.description}</p>
                       )}
                       
                       {/* Stats row */}

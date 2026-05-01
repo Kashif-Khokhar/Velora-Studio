@@ -70,16 +70,10 @@ export default function Navbar() {
                 className="md:hidden border-t border-orange-100 bg-white/98 backdrop-blur-2xl overflow-hidden shadow-2xl"
             >
                 <div className="container mx-auto px-6 py-10 flex flex-col gap-6 font-bold text-xl text-slate-700 text-center">
-                    {['Home', 'Templates', 'Live Calendar', 'About'].map((item) => (
-                         <Link 
-                            key={item}
-                            to={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '')}`} 
-                            onClick={() => setIsOpen(false)} 
-                            className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95"
-                         >
-                            {item}
-                         </Link>
-                    ))}
+                    <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95">Home</Link>
+                    <Link to="/templates" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95">Templates</Link>
+                    <Link to="/calendar" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95">Live Calendar</Link>
+                    <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-orange-600 transition-all hover:scale-105 active:scale-95">About</Link>
                     
                     <div className="pt-6 border-t border-slate-100">
                          <Link to="/editor" onClick={() => setIsOpen(false)}>

@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Templates from './pages/Templates';
@@ -25,6 +25,7 @@ function App() {
           <Route path="templates" element={<Templates />} />
           <Route path="editor" element={<Editor />} />
           <Route path="calendar" element={<LiveCalendar />} />
+          <Route path="livecalendar" element={<Navigate to="/calendar" replace />} />
           <Route path="about" element={<About />} />
           
           <Route path="features" element={<Features />} />
