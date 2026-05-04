@@ -35,9 +35,9 @@ function App() {
           <Route path="careers" element={<ComingSoon title="Careers" />} />
           <Route path="blog" element={<ComingSoon title="Velora Blog" />} />
           
-          <Route path="privacy" element={<Legal title="Privacy Policy" lastUpdated="March 2026" />} />
-          <Route path="terms" element={<Legal title="Terms of Service" lastUpdated="March 2026" />} />
-          <Route path="cookies" element={<Legal title="Cookie Policy" lastUpdated="March 2026" />} />
+          <Route path="privacy" element={<Legal title="Privacy Policy" lastUpdated="May 2026" />} />
+          <Route path="terms" element={<Legal title="Terms of Service" lastUpdated="May 2026" />} />
+          <Route path="cookies" element={<Legal title="Cookie Policy" lastUpdated="May 2026" />} />
         </Route>
       </Routes>
     </Router>

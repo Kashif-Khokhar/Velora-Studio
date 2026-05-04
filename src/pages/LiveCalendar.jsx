@@ -59,7 +59,7 @@ export default function LiveCalendar() {
       if (parts.length === 1 && !isNaN(parts[0]) && parts[0].length === 4) {
          setViewDate(new Date(parseInt(parts[0]), viewDate.getMonth(), 1));
       } else {
-          alert("Invalid date format. Try 'March 2025' or '2026'");
+          alert("Invalid date format. Try 'May 2026' or '2026'");
       }
     }
   };
