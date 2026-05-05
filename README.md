@@ -1,6 +1,8 @@
 # Velora | Premium Digital Invitations
 
-Velora is a sophisticated event invitation platform designed for creating stunning, animated digital invites. From elegant weddings to handcrafted scrapbook birthdays, Velora turns every invitation into a memorable experience.
+**Invitations that Radiate Warmth.**
+
+Velora is a sophisticated digital invitation platform designed to turn every event into a memorable experience. From elegant weddings to handcrafted scrapbook birthdays, Velora combines modern technology with high-end aesthetics to deliver stunning, animated invites.
 
 **[🌐 Live Demo](https://velora-studio-nu.vercel.app/)**
 
@@ -8,21 +10,25 @@ Velora is a sophisticated event invitation platform designed for creating stunni
 
 ## ✨ Key Features
 
-- **Exclusive Scrapbook Theme**: Handcrafted birthday collages featuring dual photo uploads, hand-drawn elements, and a handcrafted "Happy Birthday" title.
-- **High-Resolution Exports**: Download your cards in crisp, high-quality PNG format at 2x resolution—perfect for sharing or printing.
-- **Pixel-Perfect Rendering**: Precision-engineered layouts that look identical in the browser and in the final download, thanks to our specialized rendering engine.
-- **Modern Tech-Infused UI**: Sleek Aurora Red and Sunset Gold themes with advanced glassmorphism and animations.
-- **Dynamic Mini-Calendar**: A beautifully styled interactive calendar that dynamically highlights your event date.
-- **Mobile-Optimized Experience**: A fully responsive interface with a seamless "Floating Island" navigation system.
+- **🎨 Diverse Design Ecosystem**: Choose from a curated gallery of premium themes including:
+    - **Exclusive Scrapbook**: Handcrafted birthday collages with dual photo uploads and hand-drawn elements.
+    - **Black Tie Gala**: Ultra-premium gold and dark themes for formal events.
+    - **Retro Neon**: Vibrant, high-energy designs for parties and tech events.
+    - **Garden Party**: Organic, floral aesthetics for outdoor celebrations.
+- **🖼️ High-Resolution Exports**: Download your custom cards in crisp, 2x resolution PNG format—perfect for instant sharing on WhatsApp, iMessage, or social media.
+- **📅 Smart Mini-Calendar**: Every invitation features an interactive, beautifully styled calendar that dynamically highlights your specific event date.
+- **⏳ Live Interactive Calendar**: A dedicated "Time Travel" calendar page allows users to navigate through time and visualize dates with smooth animations.
+- **📱 Mobile-First Experience**: A fully responsive interface featuring a "Floating Island" navigation system, ensuring a premium feel on every device.
+- **💎 Pixel-Perfect Rendering**: Precision-engineered layout engines ensure your downloads look exactly as they do in the browser.
 
 ## 🛠️ Performance Tech Stack
 
 - **Core**: [React 19](https://reactjs.org/) (Vite)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) (Using high-performance CSS variables)
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Image Generation**: [html-to-image](https://github.com/bubkoo/html-to-image)
+- **Image Generation**: [html-to-image](https://github.com/bubkoo/html-to-image) & [dom-to-image-more](https://github.com/1904labs/dom-to-image-more)
 - **Icons**: [Lucide React](https://lucide.dev/)
-- **State & Routing**: [React Router](https://reactrouter.com/)
+- **State & Routing**: [React Router 7](https://reactrouter.com/)
 
 ## 🚀 Getting Started
 
@@ -54,16 +60,15 @@ Velora is a sophisticated event invitation platform designed for creating stunni
 
 ## 📂 Project Architecture
 
-Velora is built with a focus on visual consistency and export fidelity. Key files and directories include:
-
-- `src/pages/Editor.jsx`: The heart of the application, containing multiple layout engines including the high-fidelity Scrapbook system.
-- `src/pages/Templates.jsx`: A curated gallery of premium invitation templates.
-- `src/index.css`: Modern global theme definitions using Tailwind v4's high-performance CSS variables.
-- `src/components/`: Reusable UI components including the "Floating Island" navbar and themed buttons.
+- `src/pages/Editor.jsx`: The heart of the application, featuring multiple specialized layout engines (Scrapbook, Gala, Retro, etc.).
+- `src/pages/LiveCalendar.jsx`: The interactive time-traveling calendar system.
+- `src/pages/Templates.jsx`: A showcase of premium invitation designs.
+- `src/components/Navbar.jsx`: The "Floating Island" navigation component.
+- `src/index.css`: Global theme definitions and Tailwind v4 configuration.
 
 ## 📄 License
 
 This project is licensed under the MIT License.
 
 ---
-*Developed with ❤️ by [Kashif Ali Khokhar](https://www.linkedin.com/in/kashif-ali-khokhar?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bhst2MqgwROqhcCwEIYK8Sg%3D%3D)*
+*Developed with ❤️ by [Kashif Ali Khokhar](https://www.linkedin.com/in/kashif-ali-khokhar)*
