@@ -73,10 +73,10 @@ export default function About() {
                 <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-white shadow-2xl shrink-0">
                     <img 
                         src="https://media.licdn.com/dms/image/D4D03AQF7q0iH5kX3yA/profile-displayphoto-shrink_800_800/0/1708453535952?e=1714003200&v=beta&t=example" 
-                        alt="Kashif Khokhar" 
+                        alt="Kashif Ali Khokhar" 
                         className="w-full h-full object-cover"
                         // Fallback to a placeholder if the specific URL fails or is private
-                        onError={(e) => {e.target.src = 'https://ui-avatars.com/api/?name=Kashif+Khokhar&background=ea580c&color=fff&size=256'}}
+                        onError={(e) => {e.target.src = 'https://ui-avatars.com/api/?name=Kashif+Ali+Khokhar&background=ea580c&color=fff&size=256'}}
                     />
                 </div>
                 
