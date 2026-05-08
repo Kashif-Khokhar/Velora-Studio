@@ -147,7 +147,7 @@ export default function Templates() {
     : templates.filter(t => t.category === activeCategory);
 
   return (
-    <div className="min-h-screen pt-24 pb-20" style={{ background: 'linear-gradient(180deg, #fff7f0 0%, #ffffff 40%)' }}>
+    <div className="min-h-screen pt-24 pb-20">
       
       {/* Header */}
       <div className="container mx-auto px-6 text-center mb-14">
