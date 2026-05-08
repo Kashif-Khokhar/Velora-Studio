@@ -45,7 +45,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">Our Mission</h3>
                 <p className="text-slate-700 leading-relaxed font-medium text-lg">
-                    To democratize professional design. We believe everyone deserves to announce their life's milestones with elegance and style, without needing a degree in design.
+                    To redefine how you organize and celebrate life. We believe that managing your time and sharing your milestones should be an elegant, seamless experience, empowering everyone to create beautiful connections without boundaries.
                 </p>
             </motion.div>
 
@@ -58,7 +58,7 @@ export default function About() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-slate-900">The Technology</h3>
                 <p className="text-slate-700 leading-relaxed font-medium text-lg">
-                   Powered by modern web tech—React, Tailwind, and Framer Motion. We prioritize speed, accessibility, and fluid animations to make every interaction feel magical.
+                   Engineered for elegance and peak performance. Velora leverages the power of React, Tailwind CSS, and Framer Motion to deliver a lightning-fast, responsive experience where every interaction is smooth and every moment is captured perfectly.
                 </p>
             </motion.div>
         </div>
