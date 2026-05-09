@@ -19,9 +19,9 @@ export default function Footer() {
                         Crafting moments that matter, one invitation at a time. The future of event planning is here.
                     </p>
                     <div className="flex gap-3">
-                        <SocialLink href="https://github.com/Kashif-Khokhar" icon={<Github className="w-4 h-4" />} label="GitHub" />
-                        <SocialLink href="https://www.linkedin.com/in/kashif-ali-khokhar/" icon={<Linkedin className="w-4 h-4" />} label="LinkedIn" />
-                        <SocialLink href="https://x.com/Kashif_Khokhar1" icon={<Twitter className="w-4 h-4" />} label="Twitter" />
+                        <SocialLink href="https://github.com/Kashif-Khokhar" icon={<Github className="w-4 h-4" />} label="GitHub" hoverClass="hover:bg-[#181717] hover:text-white" />
+                        <SocialLink href="https://www.linkedin.com/in/kashif-ali-khokhar/" icon={<Linkedin className="w-4 h-4" />} label="LinkedIn" hoverClass="hover:bg-[#0077B5] hover:text-white" />
+                        <SocialLink href="https://x.com/Kashif_Khokhar1" icon={<Twitter className="w-4 h-4" />} label="Twitter" hoverClass="hover:bg-[#1DA1F2] hover:text-white" />
                     </div>
                 </div>
 
@@ -72,13 +72,13 @@ export default function Footer() {
     );
   }
 
-function SocialLink({ href, icon, label }) {
+function SocialLink({ href, icon, label, hoverClass }) {
     return (
         <a 
             href={href} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2.5 bg-white/60 hover:bg-white text-slate-600 hover:text-orange-600 rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 border border-white/50"
+            className={`p-2.5 bg-white/60 text-slate-600 rounded-full transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 border border-white/50 ${hoverClass || 'hover:bg-white hover:text-orange-600'}`}
             aria-label={label}
         >
             {icon}

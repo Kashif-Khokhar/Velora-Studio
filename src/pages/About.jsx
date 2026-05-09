@@ -87,11 +87,11 @@ export default function About() {
                         Passionate Full Stack Developer and UI/UX enthusiast. Building <span className="font-bold text-rose-600">Velora</span> to bridge the gap between complex design tools and simple, user-friendly experiences.
                     </p>
                     
-                    <div className="flex gap-4 justify-center md:justify-start">
-                        <SocialButton href="https://github.com/Kashif-Khokhar" icon={<Github className="w-5 h-5" />} label="GitHub" />
-                        <SocialButton href="https://www.linkedin.com/in/kashif-ali-khokhar/" icon={<Linkedin className="w-5 h-5" />} label="LinkedIn" />
-                        <SocialButton href="https://x.com/Kashif_Khokhar1" icon={<Twitter className="w-5 h-5" />} label="Twitter" />
-                        <SocialButton href="mailto:kashifalikhokharofficial@gmail.com" icon={<Mail className="w-5 h-5" />} label="Email" />
+                    <div className="flex gap-3 justify-center md:justify-start">
+                        <SocialButton href="https://github.com/Kashif-Khokhar" icon={<Github className="w-4.5 h-4.5" />} label="GitHub" hoverClass="hover:bg-[#181717] hover:text-white" />
+                        <SocialButton href="https://www.linkedin.com/in/kashif-ali-khokhar/" icon={<Linkedin className="w-4.5 h-4.5" />} label="LinkedIn" hoverClass="hover:bg-[#0077B5] hover:text-white" />
+                        <SocialButton href="https://x.com/Kashif_Khokhar1" icon={<Twitter className="w-4.5 h-4.5" />} label="Twitter" hoverClass="hover:bg-[#1DA1F2] hover:text-white" />
+                        <SocialButton href="mailto:kashifalikhokharofficial@gmail.com" icon={<Mail className="w-4.5 h-4.5" />} label="Email" hoverClass="hover:bg-[#EA4335] hover:text-white" />
                     </div>
                 </div>
             </div>
@@ -102,13 +102,13 @@ export default function About() {
   );
 }
 
-function SocialButton({ href, icon, label }) {
+function SocialButton({ href, icon, label, hoverClass }) {
     return (
         <a 
             href={href} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-4 bg-white hover:bg-slate-900 text-slate-700 hover:text-white rounded-2xl transition-all shadow-md hover:shadow-xl hover:-translate-y-1 flex items-center justify-center"
+            className={`p-4 bg-white text-slate-700 rounded-2xl transition-all shadow-md hover:shadow-xl hover:-translate-y-1 flex items-center justify-center ${hoverClass || 'hover:bg-slate-900 hover:text-white'}`}
             aria-label={label}
         >
             {icon}
