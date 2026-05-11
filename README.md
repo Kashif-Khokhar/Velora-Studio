@@ -15,7 +15,7 @@ Velora is a sophisticated digital invitation platform designed to turn every eve
     - **Black Tie Gala**: Ultra-premium gold and dark themes for formal events.
     - **Retro Neon**: Vibrant, high-energy designs for parties and tech events.
     - **Garden Party**: Organic, floral aesthetics for outdoor celebrations.
-- **🖼️ High-Resolution Exports**: Download your custom cards in crisp, 2x resolution PNG format—perfect for instant sharing on WhatsApp, iMessage, or social media.
+- **🖼️ High-Resolution Exports**: Download your custom cards in crisp, 2x Resolution PNG format—perfect for instant sharing on WhatsApp, iMessage, or social media.
 - **📅 Smart Mini-Calendar**: Every invitation features an interactive, beautifully styled calendar that dynamically highlights your specific event date.
 - **⏳ Live Interactive Calendar**: A dedicated "Time Travel" calendar page allows users to navigate through time and visualize dates with smooth animations.
 - **📱 Mobile-First Experience**: A fully responsive interface featuring a "Floating Island" navigation system, ensuring a premium feel on every device.
