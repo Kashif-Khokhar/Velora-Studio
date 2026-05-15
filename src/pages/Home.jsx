@@ -104,7 +104,7 @@ export default function Home() {
                  <p className="text-slate-700 font-medium">Pick a style and make it yours.</p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <TemplatePreview 
                     title="Neon Birthday" 
                     category="Birthday" 
@@ -248,7 +248,7 @@ function TemplatePreview({ title, category, image, delay }) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay, duration: 0.5 }}
-            className="group relative aspect-[4/5] rounded-3xl overflow-hidden shadow-xl"
+            className="group relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
         >
              <Link to="/editor">
                 <img 
@@ -258,11 +258,11 @@ function TemplatePreview({ title, category, image, delay }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-90"></div>
                 
-                <div className="absolute bottom-0 left-0 p-8 text-left w-full">
+                <div className="absolute bottom-0 left-0 p-6 text-left w-full">
                     <span className="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-bold tracking-wider uppercase text-white/90 mb-2 border border-white/10">
                         {category}
                     </span>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-orange-300 transition-colors">{title}</h3>
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-300 transition-colors">{title}</h3>
                 </div>
             </Link>
         </motion.div>
