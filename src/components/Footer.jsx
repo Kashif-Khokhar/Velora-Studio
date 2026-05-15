@@ -64,7 +64,7 @@ export default function Footer() {
                     © {new Date().getFullYear()} Velora. All rights reserved.
                 </p>
                 <p className="text-slate-500 text-sm flex items-center gap-1 mt-2 md:mt-0">
-                    Made with <Heart className="w-3 h-3 text-rose-500 fill-rose-500" /> by <a href="https://linkedin.com/in/kashif-ali-khokhar/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-bold transition-colors">Kashif Ali Khokhar</a>
+                    Made with <Heart className="w-4 h-4 text-rose-500 fill-rose-500" /> by <a href="https://linkedin.com/in/kashif-ali-khokhar/" target="_blank" rel="noopener noreferrer" className="text-orange-600 hover:text-orange-700 font-bold transition-colors">Kashif Ali Khokhar</a>
                 </p>
             </div>
         </div>
